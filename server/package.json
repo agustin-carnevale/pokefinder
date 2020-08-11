@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "ts-node-dev --poll src/index.ts",
+    "dev": "concurrently \"npm run server\" \"cd ../client/ && npm start \"",
+    "test": "jest --watchAll --no-cache"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.7",
+    "axios": "^0.19.2",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^6.6.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "@types/supertest": "^2.0.10",
+    "jest": "^26.3.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.2.0",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
+  }
+}
